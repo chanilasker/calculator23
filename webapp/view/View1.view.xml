@@ -1,0 +1,36 @@
+<mvc:View controllerName="calculator.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page>
+				<content>
+					
+						<VBox alignItems="Center" alignContent="Center">
+				<Title text="{i18n>title}" class="title"></Title>
+					<Label  text="{i18n>VATPercentage}"></Label>
+					<Input liveChange="calc" id="a"  value="{model>/VATPercentage}"> </Input>
+					
+						
+					<Label  text="{i18n>TotalAmountOfVAT}"></Label>
+					<Input liveChange="calc" id="b"  value="{model>/TotalAmountOfVAT}"></Input>
+				
+					
+					<Label  text="{i18n>AmountWithoutVAT}"></Label>
+					<Input liveChange="calc" id="c" value="{model>/AmountWithoutVAT}" ></Input>
+					
+
+					<Label  text="{i18n>VATAmount}"></Label>
+					<Input liveChange="calc" id="d" value="{model>/VATAmount}"></Input>
+				
+					</VBox>
+				</content>
+				<HBox class="btn">
+					<Button id="copy" icon="sap-icon://copy" press="copyToClipBoard"></Button>
+					<!-- <Button id="share" icon="sap-icon://share-2" press="share1"></Button> -->
+					<Button id="print" icon="sap-icon://print" press="print"></Button>
+					<Button id="delete" icon="sap-icon://reset" press="delete"></Button>
+					</HBox>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
